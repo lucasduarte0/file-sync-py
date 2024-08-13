@@ -5,14 +5,21 @@ description = "A Python package for mirroring and syncing two folders in real-ti
 authors = ["Lucas Duarte <lucasduarte9120@gmail.com>"]
 license = "MIT"
 readme = "README.md"
+packages = [{ include = "file_sync_py" }]
+homepage = "https://github.com/lucasduarte0/file_sync_py"
+repository = "https://github.com/lucasduarte0/file_sync_py"
+keywords = ["folder", "sync", "mirroring", "watchdog"]
 
 [tool.poetry.dependencies]
 python = "^3.10"
 watchdog = "^4.0.2"
-
+python-daemon = "^3.0.1"
 
 [tool.poetry.group.dev.dependencies]
 pytest = "^8.3.2"
+
+[tool.poetry.scripts]
+file-sync = "file_sync_py.run:main"
 
 [build-system]
 requires = ["poetry-core"]

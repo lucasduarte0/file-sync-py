@@ -49,3 +49,6 @@ __pycache__/
 .venv.bak/
 ENV/
 .env.bak
+
+.pytest_cache
+.DS_Store
